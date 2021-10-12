@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using VueController.Models;
 
@@ -32,6 +33,15 @@ namespace VueController.Services
             string AllStudent = JsonConvert.SerializeObject(Students);
             File.WriteAllText("students.json", AllStudent);
             
+        }
+        
+        public void ModifyStudent(string prenom, string nom, string NewFav)
+        {
+            StudentModel studentFound = Students.First(i => i.Name == prenom && i.Surname == nom);
+            DeleteStudent(studentFound.Id);
+            studentFound.Fav = NewFav;
+            AddStudent(studentFound);
+
         }
     }
 }

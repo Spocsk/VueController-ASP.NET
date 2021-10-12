@@ -24,25 +24,33 @@ namespace VueController.Controllers
         }
         
         // GET: Student/Create
-        [HttpGet("{nom}/{prenom}/{techno}")]
-        public IActionResult Create(string nom, string prenom, string techno)
+        [HttpGet("{prenom}/{nom}/{techno}")]
+        public IActionResult Create(string prenom, string nom, string techno)
         {
             StudentModel newStudent = new StudentModel()
             {
                 Id = Guid.NewGuid(),
-                Name = nom,
-                Surname = prenom,
+                Name = prenom,
+                Surname = nom,
                 Fav = techno
             };
            students.AddStudent(newStudent);
            return RedirectToAction("Index");
         }
         
-        // GET: Student/Delete/5
+        // GET: student/delete/id
         [HttpGet("delete/{id}")]
         public IActionResult Delete(Guid id)
         {
             students.DeleteStudent(id);
+            return RedirectToAction("Index");
+        }
+        
+        // GET: student/edit/nom/prenom/techno
+        [HttpGet("edit/{prenom}/{nom}/{techno}")]
+        public IActionResult Edit(string prenom, string nom, string techno)
+        {
+            students.ModifyStudent(prenom, nom, techno);
             return RedirectToAction("Index");
         }
         

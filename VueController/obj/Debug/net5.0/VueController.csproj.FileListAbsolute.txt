@@ -452,5 +452,3 @@
 /Users/dylan/Documents/C#/VueController/VueController/bin/Debug/net5.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/dylan/Documents/C#/VueController/VueController/obj/Debug/net5.0/Razor/Views/Student/Index.cshtml.g.cs
 /Users/dylan/Documents/C#/VueController/VueController/bin/Debug/net5.0/students.json
-/Users/dylan/Documents/C#/VueController/VueController/obj/Debug/net5.0/Razor/Views/Student/Create.cshtml.g.cs
-/Users/dylan/Documents/C#/VueController/VueController/obj/Debug/net5.0/Razor/Views/Student/Delete.cshtml.g.cs
