@@ -29,7 +29,7 @@ namespace VueController.Controllers
         {
             StudentModel newStudent = new StudentModel()
             {
-                Id = new Guid(),
+                Id = Guid.NewGuid(),
                 Name = nom,
                 Surname = prenom,
                 Fav = techno
@@ -39,6 +39,7 @@ namespace VueController.Controllers
         }
         
         // GET: Student/Delete/5
+        [HttpGet("delete/{id}")]
         public IActionResult Delete(Guid id)
         {
             students.DeleteStudent(id);

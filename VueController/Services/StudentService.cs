@@ -24,23 +24,11 @@ namespace VueController.Services
             string AllStudent = JsonConvert.SerializeObject(Students);
             File.WriteAllText("students.json", AllStudent);
         }
-
-        public StudentModel FindStudent(Guid id)
-        {
-            foreach (StudentModel student in Students)
-            {
-                if (student.Id == id)
-                {
-                    return student;
-                }
-            }
-
-            return null;
-        }
+        
 
         public void DeleteStudent(Guid id)
         {
-            Students.Remove(FindStudent(id));
+            Students.Remove(Students.First(i => i.Id == id));
             string AllStudent = JsonConvert.SerializeObject(Students);
             File.WriteAllText("students.json", AllStudent);
             
