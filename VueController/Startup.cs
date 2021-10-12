@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using VueController.Services;
 
 namespace VueController
 {
@@ -25,6 +26,7 @@ namespace VueController
         {
             IMvcBuilder instance = services.AddControllersWithViews();
             instance.AddRazorRuntimeCompilation();
+            services.AddScoped<StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

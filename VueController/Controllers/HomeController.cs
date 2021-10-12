@@ -9,7 +9,6 @@ using VueController.Models;
 
 namespace VueController.Controllers
 {
-    [Route()]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,21 +17,15 @@ namespace VueController.Controllers
         {
             _logger = logger;
         }
-
-        [Route("/")]
+        
         public IActionResult Index()
         {
             return View();
         }
-
-        [HttpGet("privacy/{id}/")]
+        
         public IActionResult Privacy(int id)
         {
-            return View(new PrivacyModel
-            {
-                Id = id,
-                Name = "Test"
-            });
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
