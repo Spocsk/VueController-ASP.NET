@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VueController", "VueController\VueController.csproj", "{6E7DF3DE-1A4B-4C01-B3C9-50CC91BDADFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E7DF3DE-1A4B-4C01-B3C9-50CC91BDADFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7DF3DE-1A4B-4C01-B3C9-50CC91BDADFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7DF3DE-1A4B-4C01-B3C9-50CC91BDADFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7DF3DE-1A4B-4C01-B3C9-50CC91BDADFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
