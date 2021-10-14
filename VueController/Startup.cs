@@ -26,7 +26,7 @@ namespace VueController
         {
             IMvcBuilder instance = services.AddControllersWithViews();
             instance.AddRazorRuntimeCompilation();
-            services.AddScoped<StudentService>();
+            services.AddSingleton<StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
